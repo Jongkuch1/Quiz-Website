@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Master</h1>
+            <nav>
+                <button id="homeBtn" class="nav-btn active">Home</button>
+                <button id="createBtn" class="nav-btn">Create Quiz</button>
+                <button id="scoresBtn" class="nav-btn">Scores</button>
+            </nav>
+        </header>
+
+        <!-- Home Section -->
+        <section id="homeSection" class="section active">
+            <h2>Available Quizzes</h2>
+            <div id="quizList" class="quiz-list"></div>
+        </section>
+
+        <!-- Create Quiz Section -->
+        <section id="createSection" class="section">
+            <h2>Create New Quiz</h2>
+            <form id="createQuizForm">
+                <input type="text" id="quizTitle" placeholder="Quiz Title" required>
+                <div id="questionsContainer">
+                    <div class="question-item">
+                        <input type="text" class="question-text" placeholder="Question 1" required>
+                        <input type="text" class="option" placeholder="Option A" required>
+                        <input type="text" class="option" placeholder="Option B" required>
+                        <input type="text" class="option" placeholder="Option C" required>
+                        <input type="text" class="option" placeholder="Option D" required>
+                        <select class="correct-answer" required>
+                            <option value="">Select Correct Answer</option>
+                            <option value="0">A</option>
+                            <option value="1">B</option>
+                            <option value="2">C</option>
+                            <option value="3">D</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" id="addQuestion">Add Question</button>
+                <button type="submit">Create Quiz</button>
+            </form>
+        </section>
+
+        <!-- Quiz Taking Section -->
+        <section id="quizSection" class="section">
+            <div id="quizContent"></div>
+        </section>
+
+        <!-- Scores Section -->
+        <section id="scoresSection" class="section">
+            <h2>Quiz Scores</h2>
+            <div id="scoresList"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
